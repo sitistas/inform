@@ -12,7 +12,7 @@ base_name="${input_file%.ni}"
 
 # Step 1: Run Inform 7
 echo "Running Inform 7..."
-inform/inform7/Tangled/inform7 "$input_file"
+inform7/Tangled/inform7 "$input_file"
 
 # Check if Inform 7 was successful
 if [ $? -ne 0 ]; then

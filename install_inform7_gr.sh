@@ -22,19 +22,18 @@ cd ..
 # Install glktermw
 wget https://www.ifarchive.org/if-archive/programming/glk/implementations/glktermw-104.tar.gz
 tar -xvf glktermw-104.tar.gz && rm glktermw-104.tar.gz
-cd glktermw
+cd glkterm
 make
 
 cd ..
 
 # Install glulxe (my repo)
 git clone https://github.com/sitistas/glulxe.git
+cd glulxe
 
 # # Install glulxe (original repo)
 # git clone https://github.com/erkyrath/glulxe.git
 # cd glulxe
-
-
 # sed -i '10,12 s/^/#/' Makefile
 # sed -i '14,16 s/^#//' Makefile
 # sed -i 's/Make.glkterm/Make.glktermw/' Makefile
@@ -42,7 +41,6 @@ git clone https://github.com/sitistas/glulxe.git
 
 make glulxe
 
-cd ../inform
-
 # Test if Inform + Glulxe is running properly
-bash play_game.sh hello_world.ni
+cd ../inform
+bash play_game.sh helloworld.ni
