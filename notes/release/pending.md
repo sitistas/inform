@@ -50,6 +50,33 @@ has been renamed:
 
 ## Bug fixes
 
+- Fix for Jira bug [I7-2551](https://inform7.atlassian.net/browse/I7-2551)
+	"The parser nothing error internal rule response (C) is badly worded"
+	([commit 9175435](https://github.com/ganelson/inform/commit/9175435a7a45acd1257812871bc1068818d65573))
+- Fix for Jira bug [I7-2543](https://inform7.atlassian.net/browse/I7-2543)
+	"Out-of-bounds memory access with one text to various K relations"
+	([commit 693da60](https://github.com/ganelson/inform/commit/693da60d8f734d62b0c7e9c04c34d5e814f9f613))	
+- Fix for Jira bug [I7-2532](https://inform7.atlassian.net/browse/I7-2532)
+	"Can't refer to the the text of the announce items from multiple object lists rule response (A) in the normal way"
+	([commit d47d1bb](https://github.com/ganelson/inform/commit/d47d1bb801090ed6d4a60c27b8111e6cdcdabc7e))
+- Fix for Jira bug [I7-2530](https://inform7.atlassian.net/browse/I7-2530)
+	"Runtime error when consulting it about with missing topic (first time only)"
+	([commit d9547d7](https://github.com/ganelson/inform/commit/d9547d71329c4af07de7e000ad1e6a6a825d4ff0))
+- Fix for Jira bug [I7-2518](https://inform7.atlassian.net/browse/I7-2518)
+	"Doesn't correctly autoassign values for kit defined kinds"
+	([commit 5136eaa](https://github.com/ganelson/inform/commit/5136eaad3366efaf99e0f73da0916deee80bb216))
+- Fix for Jira bug [I7-2510](https://inform7.atlassian.net/browse/I7-2510)
+	"Arguments leaking between phrases (?) depending on wording"
+	([commit 4e3c5f8](https://github.com/ganelson/inform/commit/4e3c5f8f0606201da56fd7f1f49e835c593c3a84))
+- Fix for Jira bug [I7-2492](https://inform7.atlassian.net/browse/I7-2492)
+	"Numbers in template code are truncated to 32 bits without warning"
+	([commit 26c0928](https://github.com/ganelson/inform/commit/26c0928ea24a4786f980b99f900d2fbbf9324a21))
+- Fix for Jira bug [I7-2490](https://inform7.atlassian.net/browse/I7-2490)
+	"Numbers in template code are truncated to 32 bits without warning"
+	([commit 752e0ea](https://github.com/ganelson/inform/commit/752e0eacf84476dd2f121980291414ac4839ca86))
+- Fix for Jira bug [I7-2484](https://inform7.atlassian.net/browse/I7-2484)
+	"The meaning of the verb 'are suspicious of' causes abject failure"
+	([commit 2dd4dcb](https://github.com/ganelson/inform/commit/2dd4dcb25ea57191b80fe8c590491f2bba7bfc18))	
 - Fix for Jira bug [I7-2470](https://inform7.atlassian.net/browse/I7-2470)
 	"Removing an entry from a list of text in a deciding phrase corrupts the original list"
 	([commit 570d703](https://github.com/ganelson/inform/commit/570d703a8c78d628f883d1ab6559b64cdbc730d3))
@@ -62,12 +89,24 @@ has been renamed:
 - Fix for Jira bug [I7-2440](https://inform7.atlassian.net/browse/I7-2440)
 	"Returning a list of text and then removing from it makes everything explode"
 	([commit 570d703](https://github.com/ganelson/inform/commit/570d703a8c78d628f883d1ab6559b64cdbc730d3))
+- Fix for Jira bug [I7-2420](https://inform7.atlassian.net/browse/I7-2420)
+	"Extension author name casing can cause `for use with` in another extension's section header to go awry"
+	([commit bf011bc](https://github.com/ganelson/inform/commit/bf011bc8e69dcfd274718a46d329c7eb3ab02f96))
 - Fix for Jira bug [I7-2416](https://inform7.atlassian.net/browse/I7-2416)
 	"Hyperbolic sinh and cosh each have the implementation the other needs"
 	([PR#126](https://github.com/ganelson/inform/pull/126))
+- Fix for Jira bug [I7-2407](https://inform7.atlassian.net/browse/I7-2407)
+	"Abject failure when trying to add an intermediate kind"
+	([commit 1a963d3](https://github.com/ganelson/inform/commit/1a963d32b39488eb0b7e1ff36ba74cd6ec1f9e68))
+- Fix for Jira bug [I7-2399](https://inform7.atlassian.net/browse/I7-2399)
+	"Bad error message with long action names sharing same beginning text"
+	(see [Inweb commit db36ef3](https://github.com/ganelson/inform/commit/db36ef30c9dfbcd956a7c7d44ef1094f710b4d6d))
 - Fix for Jira bug [I7-2384](https://inform7.atlassian.net/browse/I7-2384)
 	"Some Standard Rule responses use 'here' instead of '[here]', producing 'here' in cases that should be 'there'"
 	([PR#116](https://github.com/ganelson/inform/pull/116))
+- Fix for Jira bug [I7-2376](https://inform7.atlassian.net/browse/I7-2376)
+	"Incorrect behavior for 'empty' adjective applied to 1-to-1 relations"
+	(see [commit 918f9c3](https://github.com/ganelson/inform/commit/918f9c37193ea4aa09a21e34c622233fe4cc69db))
 - Fix for Jira bug [I7-2370](https://inform7.atlassian.net/browse/I7-2370)
 	"A template file ending with a comment and no line break breaks the next file"
 	(see [Inweb commit 901d125](https://github.com/ganelson/inform/commit/901d12582f1d7746046f11ecac6c2f357ddfac81))
@@ -80,6 +119,9 @@ has been renamed:
 - Fix for Jira bug [I7-2353](https://inform7.atlassian.net/browse/I7-2353)
 	"Setting room description heading rule response (A) causes Array index out of bounds"
 	([commit 6778a15](https://github.com/ganelson/inform/commit/6778a15ff6004e4dc8760975851fb478b0eef419))
+- Fix for Jira bug [I7-2351](https://inform7.atlassian.net/browse/I7-2351)
+	"Properties not being set when creating objects by table"
+	([commit e6b21df](https://github.com/ganelson/inform/commit/e6b21df18f4c28e7d71a8526def8c8bddb54fd56))
 - Fix for Jira bug [I7-2349](https://inform7.atlassian.net/browse/I7-2349)
 	"example 399, "Solitude", has a bug"
 	([PR#115](https://github.com/ganelson/inform/pull/115))
@@ -90,6 +132,9 @@ has been renamed:
 	"You can `use dict_word_size of 12` and I7's ok with it, but then passes it
 	on to I6 in lower case"
 	([commit a011ec6](https://github.com/ganelson/inform/commit/a011ec67b900bf13d89ab73a46dc519b58c69906))
+- Fix for Jira bug [I7-2336](https://inform7.atlassian.net/browse/I7-2336)
+	"When an either-or property is implemented as an I6 property rather than an I6 attribute, reading the property throws a run-time error"
+	([commit 44a87dd](https://github.com/ganelson/inform/commit/44a87dd54d6465ae605a0e9974e50582c34524d3))
 - Fix for Jira bug [I7-2335](https://inform7.atlassian.net/browse/I7-2335)
 	"Several previously-legal forms of the Array directive no longer work in I6 inclusions in 10.1.2"
 	([commit 4d97b49](https://github.com/ganelson/inform/commit/4d97b499cfd3e15650d1bba1e6e8c70c24a01fb2))
@@ -106,6 +151,9 @@ has been renamed:
 	[I7-2333](https://inform7.atlassian.net/browse/I7-2333),
 	[I7-2364](https://inform7.atlassian.net/browse/I7-2364), all duplicates
 	to do with actions defined with "it" in the name
+- Fix for Jira bug [I7-2308](https://inform7.atlassian.net/browse/I7-2308)
+	"If you define a verb to mean a block-valued property, setting via verb works, but testing via verb is always false"
+	([commit d911182](https://github.com/ganelson/inform/commit/d911182b36e308dde5b7827ac3cac367c178831e))
 - Fix for Jira bug [I7-2306](https://inform7.atlassian.net/browse/I7-2306)
 	"remaining arbitary ifdefs in kit code": also fixes an unreported bug in
 	which the use options "Use numbered rules", "Use manual pronouns",
@@ -116,6 +164,9 @@ has been renamed:
 - Fix for Jira bug [I7-2304](https://inform7.atlassian.net/browse/I7-2304)
 	"switch(): first branch can't start with negative number"
 	([commit 1c18007](https://github.com/ganelson/inform/commit/1c18007326bf6fb15c74a1d5742827a4d76a0c20))
+- Fix for Jira bug [I7-2301](https://inform7.atlassian.net/browse/I7-2301)
+	"compiler error when creating an object with 'there is' and setting conditions or either/or properties"
+	([commit dc283f9](https://github.com/ganelson/inform/commit/dc283f9549b3eda25f1a24d09cbf9e5ae59e0b61))
 - Fix for Jira bug [I7-2298](https://inform7.atlassian.net/browse/I7-2298)
 	""to" in I6 switch statement is not recognized"
 	([commit 04e526f](https://github.com/ganelson/inform/commit/04e526f0a676b89fa032d6c886a146499d5e7ae5))
@@ -131,6 +182,12 @@ has been renamed:
 	"segfaults in linux with latest inform, ..., built with gcc": see
 	also [I7-2108](https://inform7.atlassian.net/browse/I7-2108)
 	(hat-tip to Adrian Welcker: [PR#111](https://github.com/ganelson/inform/pull/111))
+- Fix for Jira bug [I7-2278](https://inform7.atlassian.net/browse/I7-2278)
+	"Object or subkind of object with anonymous properties causing compilation failure"
+	([commit aaf0aa9](https://github.com/ganelson/inform/commit/aaf0aa9ca0f0b589d63f0d07b123ccecb35049de))	
+- Fix for Jira bug [I7-2275](https://inform7.atlassian.net/browse/I7-2275)
+	"Bad results from 'K that relates to Y (a value of kind L) by R' when K is a subkind of what R was defined with"
+	([commit 2cca448](https://github.com/ganelson/inform/commit/2cca448105dc5cfa2e4117f724b3905a6e1fc82c))	
 - Fix for Jira bug [I7-2269](https://inform7.atlassian.net/browse/I7-2269)
 	"Output of I6 floating point literals strips the '+', resulting in uncompilable I6"
 	([commit 46349cb](https://github.com/ganelson/inform/commit/46349cb85c56116602c9245ee47e67ea08155d40))
@@ -153,9 +210,18 @@ has been renamed:
 - Fix for Jira bug [I7-2247](https://inform7.atlassian.net/browse/I7-2247)
 	"Internal error 'unowned' when using 'Understand'"
 	([commit 3ebcac0](https://github.com/ganelson/inform/commit/3ebcac0b5dc58e9754de6b2c8dd85fad719e4629))
+- Fix for Jira bug [I7-2245](https://inform7.atlassian.net/browse/I7-2245)
+	"Internal error when changing a value in a table based on a correspondence"
+	([commit 32c4366](https://github.com/ganelson/inform/commit/32c43662084d0c7cbf5edc5f1d62c2fb20cf174e))
 - Fix for Jira bug [I7-2242](https://inform7.atlassian.net/browse/I7-2242)
 	"Creating kinds via tables fails"
 	([commit 0038a2e](https://github.com/ganelson/inform/commit/0038a2e46f91fa104f65c7c910ff7097f1c09198))
+- Fix for Jira bug [I7-2241](https://inform7.atlassian.net/browse/I7-2241)
+	"Error using a rulebook as one of the kinds of value in a relation"
+	([commit bb3fe3a](https://github.com/ganelson/inform/commit/bb3fe3aae2a3a8fb53b4deecd102f4766289ae50))
+- Fix for Jira bug [I7-2239](https://inform7.atlassian.net/browse/I7-2239)
+	"Can't use a nothing-based rulebook as a parameter"
+	([commit b525fba](https://github.com/ganelson/inform/commit/b525fbaf50f866312de34103c6cda16a4f2bd8c9))
 - Fix for Jira bug [I7-2237](https://inform7.atlassian.net/browse/I7-2237)
 	"Inform hangs when reading a Neptune file in a kit with no final newline"
 	([commit 1cd75d8](https://github.com/ganelson/inform/commit/1cd75d8a4946ba10636a8ec474aded9716fffe9b))
@@ -172,9 +238,15 @@ has been renamed:
 - Fix for Jira bug [I7-2234](https://inform7.atlassian.net/browse/I7-2234)
 	"Non-heading @ sections not supported in template files"
 	(Inweb: [commit f2aaa32](https://github.com/ganelson/inweb/commit/f2aaa32479e14187679828e3e5696f5951b43b38))
+- Fix for Jira bug [I7-2227](https://inform7.atlassian.net/browse/I7-2227)
+	"Backdrop placement assertions being ignored"
+	(Inweb: [commit 4943a61](https://github.com/ganelson/inweb/commit/4943a6157c18810b2de949c0bd0d79c81d136fe3))
 - Fix for Jira bug [I7-2225](https://inform7.atlassian.net/browse/I7-2225)
 	"Translating kinds into I6 doesn't work"
 	(Inweb: [commit d608388](https://github.com/ganelson/inweb/commit/d608388d643a85d1aa3c88cfa1710b848bd5cb7e))
+- Fix for Jira bug [I7-2199](https://inform7.atlassian.net/browse/I7-2199)
+	"Property names whose identifiers begin with identical long strings -> Property given twice in the same declaration error"
+	([commit 2ac854e](https://github.com/ganelson/inform/commit/2ac854e163a779c0322ecf0736877916653fc40a))
 - Fix for Jira bug [I7-2142](https://inform7.atlassian.net/browse/I7-2142)
 	"With 'the foo rule substitutes for the bar rule when...', the bar rule is
 	suppressed but the foo rule isn't followed."
@@ -185,6 +257,9 @@ has been renamed:
 - Fix for Jira bug [I7-2129](https://inform7.atlassian.net/browse/I7-2129)
 	"Quiet supporters from The Eye of the Idol no longer work"
 	([PR#114](https://github.com/ganelson/inform/pull/114))
+- Fix for Jira bug [I7-2125](https://inform7.atlassian.net/browse/I7-2125)
+	"Inblorb copies Cover.png to Small Cover.png"
+	([commit 36a6eb0](https://github.com/ganelson/inweb/commit/36a6eb0bd9ff81425a75ff1435002053e09eb59e))
 - Fix for Jira bug [I7-2074](https://inform7.atlassian.net/browse/I7-2074)
 	"Documentation recommends scene code that causes soft lock" (about times
 	since scene ending sometimes being negative)
@@ -193,10 +268,13 @@ has been renamed:
 	"Multiple 'take all' in an empty room causes a 'Too many activities are going on at once.' error"
 	([PR#139](https://github.com/ganelson/inform/pull/139))
 - Fix for Jira bug [I7-1973](https://inform7.atlassian.net/browse/I7-1973) = Mantis 2009
-	"Standard 'deciding whether all include' rules don't apply to an actor."
+	"Standard 'deciding whether all include' rules don't apply to an actor"
 	([PR#113](https://github.com/ganelson/inform/pull/113))
+- Fix for Jira bug [I7-1929](https://inform7.atlassian.net/browse/I7-1929) = Mantis 1965
+	"When defining a kind-of-object via table, properties are misplaced"
+	([commit 70fa464](https://github.com/ganelson/inweb/commit/70fa464c677791501bd83efda9bf63802a77e558))
 
-- Cosmetic fixes not worth linking to (I7-2481, I7-2480, I7-2478, I7-2473, I7-2350, I7-2348, I7-2319, I7-2316, I7-2315, I7-2311, I7-2299, I7-2293, I7-2270, I7-2268, I7-2221, I7-2214, I7-2210, I7-2120)
+- Cosmetic fixes not worth linking to (I7-2570, I7-2529, I7-2502, I7-2481, I7-2480, I7-2478, I7-2473, I7-2350, I7-2348, I7-2319, I7-2316, I7-2315, I7-2311, I7-2299, I7-2293, I7-2270, I7-2268, I7-2221, I7-2214, I7-2210, I7-2120)
 
 ## Bugs fixed but not from tracked reports
 

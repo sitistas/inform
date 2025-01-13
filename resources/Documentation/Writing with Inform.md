@@ -8273,7 +8273,7 @@ As a pedantic footnote here: It sometimes comes as a surprise to power users of 
 
 In fact this is not a contradiction. For reasons of efficiency, there is not one single `Check` rulebook with hundreds or thousands of rules in: there is one for each action, whose name consists of the word `Check` followed by the action name. So `Check photographing` is the rulebook holding the example rules above. Similarly for `Check scraping it with`.
 
-As it happens, it is _also_ legal to write `Check scraping something with`, or `Check scraping a door with something edible`, and similar. Moreover something like `Check asking somebody to try scraping something with something` will work where `Check asking somebody to try scraping it with:` will not. So there is no actual need to use `it` in the names of `Check` rules, and it's perhaps better style not to, but the fact that `Check scraping it with` works is not a bug.
+In any case, it is _also_ legal to write `Check scraping something with`, or `Check scraping a door with something edible`, and similar. So there is no actual need to use `it` in the names of `Check` rules, and it's perhaps better style not to, but the fact that `Check scraping it with` works is not a bug.
 
 ## Action variables {PM_ActionVarsPastTense} {PM_ActionVarAnd} {PM_ActionVarOverspecific} {PM_ActionVarUnknownKOV} {PM_ActionVarValue} {PM_BadMatchingSyntax}
 
@@ -15285,7 +15285,7 @@ And we might use the flotation rules in a circumstance like this:
 
 ## Rulebook variables {PM_RulebookVariableAnd} {PM_RulebookVariableTooSpecific} {PM_RulebookVariableBadKind} {PM_RulebookVariableVague}
 
-^^{rulebooks: variables for rulebooks} ^^{variables: for rulebooks} ^^{defining: rulebook variables} ^^{|called: in defining rulebook variables}
+^^{rulebooks: variables for rulebooks} ^^{variables: for rulebooks} ^^{defining: rulebook variables} ^^{|called: in defining rulebook variables} ^^{rules: very first and very last} ^^{very first rules} ^^{very last rules}
 
 We have already seen that actions can have named values which stay with them while the action is being processed, but do not exist at other times: the variable called `actor`, for example. And activities have a similar ability. See [Action variables] and [Activity variables], respectively.
 
@@ -15310,6 +15310,25 @@ And we had better do something with the result:
 	The last aptitude rule: say "Your aptitude rating is [aptitude mark]."
 
 A rulebook can have any number of variables like this. They behave much like `let` values except that they last for a whole rulebook, not an individual rule or To phrase definition. (Well, strictly speaking they are accessible not just to the rules which belong to the rulebook, but also to any rules which previously belonged to the rulebook but were kicked out by means of an explicit rule-listing sentence. This is good because otherwise they will suddenly cause problem messages when unlisted.)
+
+Some rulebooks need to set up initial values for their variables, and a special kind of rule is provided as a convenient way to do that. For example:
+
+	The very first aptitude rule:
+		now the aptitude mark is 100.
+
+This rule is only special in its placement — it is guaranteed to be the first rule in the rulebook, come what may — and is otherwise just like any other rule. Because it always goes first, no other rule can ever use the value of `aptitude mark` before it is set up to its initial value.
+
+There are a number of deliberate restrictions on `very first` rules:
+
+- A rulebook can only have one `very first` rule.
+- It has to be written in the same extension as the rulebook it belongs to, or
+else they both have to be in the main source text and not in an extension at all.
+- No other rule can be listed instead of a `very first` rule with a `listed instead of` sentence.
+- A `very first` rule cannot be unlisted from its rulebook with a `not listed` sentence.
+
+The point of this is that a `very first` rule belongs to the person who created the rulebook, and cannot be tampered with by users.
+
+Similarly, if less usefully, a rulebook can have a `very last` rule, which is subject to the same restrictions.
 
 ## Success and failure {PM_DefaultOutcomeTwice} {PM_BadDefaultOutcome}
 

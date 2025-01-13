@@ -125,12 +125,16 @@ void DefineByTable::kind_defined_by_table(parse_node *V) {
 @h Creation.
 
 @<Create whatever is in column 1@> =
-	kind *K = NULL;
+	kind *K = NULL, *K_weak = NULL;
 	@<Determine the kind of what to make@>;
 	@<Check that this is a kind where it makes sense to enumerate new values@>;
-	K = Kinds::weaken(K, K_object);
-	if (!(Kinds::Behaviour::is_object(K))) RTTables::defines(t, K);
-	t->kind_defined_in_this_table = K;
+	K_weak = Kinds::weaken(K, K_object);
+	if (Kinds::Behaviour::is_object(K_weak)) {
+		t->kind_defined_in_this_table = K;
+	} else {
+		RTTables::defines(t, K_weak);
+		t->kind_defined_in_this_table = K_weak;
+	}
 	Tables::Columns::set_kind(t->columns[0].column_identity, t, K);
 	@<Create values for this kind as enumerated by names in the first column@>;
 
@@ -141,7 +145,6 @@ void DefineByTable::kind_defined_by_table(parse_node *V) {
 	int defining_objects = FALSE;
 	if (Specifications::is_kind_like(what)) {
 		K = Specifications::to_kind(what);
-		if (Kinds::Behaviour::is_object(K)) defining_objects = TRUE;
 	} else if (Specifications::object_exactly_described_if_any(what)) {
 		@<Issue PM_TableDefiningObject problem@>
 		return;
@@ -153,6 +156,7 @@ void DefineByTable::kind_defined_by_table(parse_node *V) {
 		@<Actually issue PM_TableDefiningTheImpossible problem@>;
 		return;
 	}
+	if (Kinds::Behaviour::is_object(K)) defining_objects = TRUE;
 	if (t) Tables::use_to_define(t, defining_objects, V->next);
 
 @ This is all a little clumsy, but it rewrites, say, "kinds of snake" in a
@@ -427,8 +431,9 @@ property storage mechanisms that we intend this to happen.
 following immediately after a permission grant.)
 
 @<Passively allow the column to become the property values@> =
-	if (global_pass_state.pass == 1)
+	if (global_pass_state.pass == 1) {
 		RTPropertyPermissions::set_table_storage_iname(RTTables::tcu_iname(&(t->columns[i])));
+	}
 
 @ Active assertions of properties are, once again, a matter of calling the
 assertion handler, simulating sentences like "The P of X is Y".

@@ -957,6 +957,14 @@ inform_extension *Extensions::corresponding_to(source_file *sf) {
 	return Extensions::from_copy(C);
 }
 
+inform_extension *Extensions::containing(parse_node *sentence) {
+	wording W = Node::get_text(sentence);
+	source_file *from = NULL;
+	if (Wordings::nonempty(W)) from = Lexer::file_of_origin(Wordings::first_wn(W));
+	inform_extension *E = Extensions::corresponding_to(from);
+	return E;
+}
+
 @h Miscellaneous.
 
 =
@@ -1038,6 +1046,18 @@ parse_node *Extensions::get_inclusion_sentence(inform_extension *E) {
 int Extensions::is_standard(inform_extension *E) {
 	if (E == NULL) return FALSE;
 	return E->standard;
+}
+
+@ And this is only actually used to locate the standard extensions.
+
+=
+inform_extension *Extensions::find_by_name(text_stream *name, text_stream *author,
+	linked_list *nest_list, inbuild_requirement *req) {
+	if (req == NULL) req = Requirements::any_version_of(Works::new(extension_bundle_genre, name, author));
+	inbuild_search_result *R = Nests::search_for_best(req, nest_list);
+	if (R == NULL) return NULL;
+	inbuild_copy *C = R->copy;
+	return ExtensionBundleManager::from_copy(C);
 }
 
 @h Version requirements.
