@@ -1,4 +1,7 @@
-"First Linux Story" by Ntinakos
+"First Linux Story" by Ntinakos (in Greek)
+
+When play begins:
+    Say "Hi!";
 
 The kitchen is a room.
 
