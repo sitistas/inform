@@ -12,6 +12,9 @@ Understand "βάλε [other things] στο [something]" as inserting it into.
 
 The τσάντα is an open container. The τσάντα is in the kitchen.
 
+A marble is a kind of thing.
+10 marbles are in the kitchen. The description of a marble is "A small, round, colorful object.".
+
 A gem is a kind of thing. Understand "διαμάντι" as a gem.
 A gem has a text called the χρώμα. Understand the χρώμα property as describing a gem.
 The description of a gem is usually "The διαμάντι is [χρώμα]."
