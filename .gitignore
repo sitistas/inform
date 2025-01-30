@@ -49,3 +49,5 @@ inform6/inform6.mk
 retrospective/makefile
 rsync.log
 
+helloworld.i6
+helloworld.ulx
