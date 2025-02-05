@@ -10,10 +10,15 @@ Every turn:
 
 κουζίνα is a room.
 
-[Understand the command "πάρε" as "take".
-Understand the command "άσε" as "drop". ]
+The lamp is a device in the κουζίνα. The lamp is switched off.
 
-Understand "βάλε [other things] στο [something]" as inserting it into.
+Instead of switching on the lamp:
+	say "You flick the switch, and the lamp glows warmly.";
+    now the lamp is lit.
+
+Instead of switching off the lamp:
+    say "You flick the switch, and the lamp goes out.";
+    now the lamp is unlit.
 
 The τσάντα is an open container. The τσάντα is in the κουζίνα.
 
