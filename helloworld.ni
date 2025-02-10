@@ -3,6 +3,7 @@
 When play begins:
     now the right hand status line is "[time of day]";
     now the story viewpoint is the second person plural;
+    now the story tense is future tense;
     Say "Γεια σου!".
 
 Every turn:
