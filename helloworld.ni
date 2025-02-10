@@ -7,7 +7,7 @@ When play begins:
     Say "Γεια σου!".
 
 Every turn:
-    say "The time is [time of day]".
+    say "H ώρα είναι [time of day]".
 
 κουζίνα is a room.
 
@@ -50,4 +50,5 @@ The player carries a νόμισμα.
 The indefinite article of the νόμισμα is "ένα".
 The description of the νόμισμα is "[A νόμισμα] έχει ένα ελληνικό άρθρο."
 
-test me with "i/n/quit/yes"
+[ TODO: Create a complete testing scenario ]
+test me with "οχ/,/τέλος/π/ο/λ,ν/β/βορεια/βόρεια"
