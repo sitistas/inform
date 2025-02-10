@@ -41,6 +41,13 @@ cd glulxe
 
 make glulxe
 
-# Test if Inform + Glulxe is running properly
+# TODO: Test the following:
 cd ../inform
+cd inform7/Internal/Extensions/Konstantinos Sitistas
+
+git submodule update --recursive
+
+cd ../../../../
+# Test if Inform + Glulxe is running properly
+# cd ../inform
 bash play_game.sh helloworld.ni
