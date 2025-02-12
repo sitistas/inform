@@ -10,6 +10,7 @@ Every turn:
     say "H ώρα είναι [time of day]".
 
 κουζίνα is a room.
+[ Υπνοδωμάτιο is a room. Υπνοδωμάτιο είμαι βόρεια της κουζίνα. ]
 
 The lamp is a device in the κουζίνα. The lamp is switched off.
 
