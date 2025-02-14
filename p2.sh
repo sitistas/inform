@@ -11,6 +11,9 @@ fi
 input_file="$1"
 base_name="${input_file%.ni}"
 
+# Get the directory of the input file
+input_dir=$(dirname "$input_file")/
+
 run_inform7() {
     echo "Running Inform 7..."
     inform7/Tangled/inform7 "$input_file"
@@ -19,8 +22,11 @@ run_inform7() {
 
 run_inform6() {
     i6_file="$base_name.i6"
+    echo $i6_file
     echo "Running Inform 6..."
     inform6/Tangled/inform6 -G -w "$i6_file"
+    ulx_file="${base_name##*/}.ulx"
+    mv "$ulx_file" "$input_dir"
     echo "Inform 6 compilation successful."
 }
 
