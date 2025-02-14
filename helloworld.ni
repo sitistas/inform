@@ -2,27 +2,27 @@
 
 When play begins:
     now the right hand status line is "[time of day]";
-    now the story viewpoint is the second person plural;
-    now the story tense is future tense;
+    now the story viewpoint is the δεύτερο πληθυντικό πρόσωπο;
+    now the story tense is μέλλοντας;
     Say "Γεια σου!".
 
 Every turn:
     say "H ώρα είναι [time of day]".
 
-κουζίνα is a room.
+κουζίνα είναι ένα δωμάτιο.
 [ Υπνοδωμάτιο is a room. Υπνοδωμάτιο είμαι βόρεια της κουζίνα. ]
 
-The lamp is a device in the κουζίνα. The lamp is switched off.
+the lamp είναι συσκευή in the κουζίνα. the lamp is switched off.
 
-Instead of switching on the lamp:
-	say "You flick the switch, and the lamp glows warmly.";
+[ Instead of switching on the lamp:
+	say "Κουνάς το διακόπτη, και η λάμπα φέγγει.";
     now the lamp is lit.
 
-Instead of switching off the lamp:
-    say "You flick the switch, and the lamp goes out.";
-    now the lamp is unlit.
+Instead of switching the lamp:
+    say "Κουνάς το διακόπτη, και η λάμπα σβήνει.";
+    now the lamp is unlit. ]
 
-The τσάντα is an open container. The τσάντα is in the κουζίνα.
+The σάκος is an open δοχείο. The σάκος is in the κουζίνα.
 
 A marble is a kind of thing.
 έντεκα marbles are in the κουζίνα. The description of a marble is "Ένα μικρό, σφαιρικό, πολύχρωμο αντικείμενο.".
@@ -47,8 +47,8 @@ The ρουμπίνι is a gem in the κουζίνα. The χρώμα is "κόκκ
 The emerald is a gem in the κουζίνα. The χρώμα is "πράσινο".
 
 
-The player carries a νόμισμα.
-The indefinite article of the νόμισμα is "ένα".
+The player carries ένα νόμισμα.
+[ The indefinite article of the νόμισμα is "ένα". ]
 The description of the νόμισμα is "[A νόμισμα] έχει ένα ελληνικό άρθρο."
 
 [ TODO: Create a complete testing scenario ]
