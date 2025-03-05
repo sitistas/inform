@@ -26,7 +26,9 @@ run_inform6() {
     echo "Running Inform 6..."
     inform6/Tangled/inform6 -G -w "$i6_file"
     ulx_file="${base_name##*/}.ulx"
-    mv "$ulx_file" "$input_dir"
+    if [ "$input_dir" != "./" ]; then
+        mv "$ulx_file" "$input_dir"
+    fi
     echo "Inform 6 compilation successful."
 }
 
