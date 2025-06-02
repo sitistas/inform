@@ -1,28 +1,37 @@
 "Πρώτη ελληνική ιστορία" by Ντινάκος (in Greek)
 
+The time of day is 11:30 pm.
+
 When play begins:
     now the right hand status line είναι "[time of day]";
     now the story viewpoint είναι δεύτερο πληθυντικό πρόσωπο;
     [ now the story tense is μέλλοντας; ]
+    say "-123456789 -> [-123456789 in words][line break]";
+    say "1000001    -> [1000001 in words][line break]";
+    say "8781       -> [8781 in words][line break]";
+    say "1234       -> [1234 in words][line break]";
+    say "-19        -> [-19 in words][line break]";
+    say "[text of print the final prompt rule response (A)]";
     Say "Γεια σου!".
 
 Every turn:
     say "H ώρα είναι [time of day]".
 
-The carrying capacity of the player is 1.
+[ The carrying capacity of the player is 1. ]
 
 Η κουζίνα (f) είναι ένα δωμάτιο.
 [ Υπνοδωμάτιο is a room. Υπνοδωμάτιο είμαι βόρεια της kitchen. ]
 
-the lamp είναι συσκευή in the κουζίνα. the lamp is switched off.
+the λάμπα (f) είναι συσκευή in the κουζίνα. the λάμπα is switched off.
+[ Η λάμπα (f) είναι συσκευή in the κουζίνα. the λάμπα is switched off. ]
 
-[ Instead of switching on the lamp:
+[ Instead of switching on the λάμπα:
 	say "Κουνάς το διακόπτη, και η λάμπα φέγγει.";
-    now the lamp is lit.
+    now the λάμπα is lit.
 
-Instead of switching the lamp:
+Instead of switching the λάμπα:
     say "Κουνάς το διακόπτη, και η λάμπα σβήνει.";
-    now the lamp is unlit. ]
+    now the λάμπα is unlit. ]
 
 [ The σάκος is an open δοχείο. The σάκος is in the kitchen. ]
 
@@ -59,3 +68,5 @@ The description of the νόμισμα is "[A νόμισμα] έχει ένα ε�
 
 [ TODO: Create a complete testing scenario ]
 test me with "οχ/,/τέλος/π/ο/λ,ν/β/βορεια/βόρεια/πάρε βββ"
+
+[ test responses with "" ]
