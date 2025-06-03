@@ -3,35 +3,49 @@
 The time of day is 11:30 pm.
 
 When play begins:
-    now the right hand status line είναι "[time of day]";
-    now the story viewpoint είναι δεύτερο πληθυντικό πρόσωπο;
-    [ now the story tense is μέλλοντας; ]
-    say "-123456789 -> [-123456789 in words][line break]";
-    say "1000001    -> [1000001 in words][line break]";
-    say "8781       -> [8781 in words][line break]";
-    say "1234       -> [1234 in words][line break]";
-    say "-19        -> [-19 in words][line break]";
-    say "[text of print the final prompt rule response (A)]";
-    Say "Γεια σου!".
+	now the right hand status line είναι "[time of day]";
+	now the story viewpoint είναι δεύτερο πληθυντικό πρόσωπο;
+	[ now the story tense is μέλλοντας; ]
+	say "-123456789 -> [-123456789 in words][line break]";
+	say "1000001    -> [1000001 in words][line break]";
+	say "8781       -> [8781 in words][line break]";
+	say "1234       -> [1234 in words][line break]";
+	say "-19        -> [-19 in words][line break]";
+	say "Γεια σου!".
+	[say "[text of print the final prompt rule response (A)]";]
 
-Every turn:
-    say "H ώρα είναι [time of day]".
+
+[ Every turn:
+	say "H ώρα είναι [time of day]". ]
 
 [ The carrying capacity of the player is 1. ]
+
+[ A βόλος is a kind of thing. The plural of βόλος is βόλοι.
+There are 11 βόλος in the κουζίνα. The description of a βόλος is "Ένα μικρό, σφαιρικό, πολύχρωμο αντικείμενο.". ]
 
 Η κουζίνα (f) είναι ένα δωμάτιο.
 [ Υπνοδωμάτιο is a room. Υπνοδωμάτιο είμαι βόρεια της kitchen. ]
 
-the λάμπα (f) είναι συσκευή in the κουζίνα. the λάμπα is switched off.
+the λάμπα (f) is a device in the κουζίνα. the λάμπα is switched off.
 [ Η λάμπα (f) είναι συσκευή in the κουζίνα. the λάμπα is switched off. ]
+
+The κρεμάστρα (f) is a στήριγμα in the κουζίνα. The description of the κρεμάστρα is "Μια πλαστική, ξύλινη ή μεταλλική κατασκευή για κρέμασμα ρούχων.".
+
+The απλώστρα (f) is a thing.
+There are 2 απλώστρες in the κουζίνα. The description of an απλώστρα is "Μια μεταλλική κατασκευή για να απλώνεις ρούχα.".
+
+The κλόουν (m) is a person. The description of the κλόουν is "Ένας πολύχρωμος κλόουν με μεγάλη μύτη.".
+The κλόουν is in the κουζίνα.
+
+Το βιβλίο (n) είναι ένα πράγμα. The description of βιβλίο is "Ένα παλιό βιβλίο με πολλές σελίδες.". The βιβλίο is in the κουζίνα.
 
 [ Instead of switching on the λάμπα:
 	say "Κουνάς το διακόπτη, και η λάμπα φέγγει.";
-    now the λάμπα is lit.
+	now the λάμπα is lit.
 
 Instead of switching the λάμπα:
-    say "Κουνάς το διακόπτη, και η λάμπα σβήνει.";
-    now the λάμπα is unlit. ]
+	say "Κουνάς το διακόπτη, και η λάμπα σβήνει.";
+	now the λάμπα is unlit. ]
 
 [ The σάκος is an open δοχείο. The σάκος is in the kitchen. ]
 
@@ -61,7 +75,8 @@ The ρουμπίνι is a gem in the kitchen. The χρώμα is "κόκκινο"
 The emerald is a gem in the kitchen. The χρώμα is "πράσινο".
 
 
-The player κρατάει ένα νόμισμα.
+The player κρατάει ένα νόμισμα (n).
+The player κρατάει μία τράπουλα (f).
 The player κρατάει δέκα τσιπ.
 [ The indefinite article of the νόμισμα is "ένα". ]
 The description of the νόμισμα is "[A νόμισμα] έχει ένα ελληνικό άρθρο."
